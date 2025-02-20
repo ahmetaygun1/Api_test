@@ -1,4 +1,4 @@
-# Api_test
+API README :
 📖 FastAPI Tabanlı Telemetri & Kilitlenme API - README
 
 Bu proje, FastAPI kullanılarak geliştirilmiş bir telemetri, QR, kamikaze ve kilitlenme verisi yönetim API’sidir. MongoDB ile entegre edilmiştir ve kullanıcı kimlik doğrulama işlemlerini destekler.
@@ -183,3 +183,109 @@ http://127.0.0.1:8001/docs
 	•	Hız limiti gibi bazı güvenlik kontrolleri API içerisinde uygulanmıştır.
 
 Bu API, Teknofest yarışmaları ve otonom İHA projeleri için telemetri, kilitlenme ve kamikaze verisi yönetimini sağlamak amacıyla geliştirilmiştir.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+CLİENT
+
+API Test Script - README
+
+Bu belge, API test scriptinin nasıl çalıştırılacağını ve hangi fonksiyonları içerdiğini açıklamaktadır.
+
+📌 Gereksinimler
+	•	Python 3.x yüklü olmalıdır.
+	•	requests modülü yüklü olmalıdır. (Yüklemek için: pip install requests)
+	•	API sunucusu çalışır durumda olmalıdır.
+
+🚀 Kullanım
+
+1️⃣ Scripti Çalıştırma
+
+Terminal veya komut istemcisinde aşağıdaki komutu çalıştırın:
+
+python test_api.py
+
+Eğer giriş başarılı olursa, tüm testler otomatik olarak çalışacaktır.
+
+📜 API Test Fonksiyonları
+
+1. Giriş (Authentication)
+	•	Fonksiyon: authenticate()
+	•	Endpoint: /api/giris
+	•	Açıklama: Kullanıcı adı ve şifre ile API’ye giriş yapar.
+
+2. Sunucu Saati Testi
+	•	Fonksiyon: test_sunucusaati()
+	•	Endpoint: /api/sunucusaati
+	•	Açıklama: API sunucusunun saatini kontrol eder.
+
+3. Telemetri Verisi Gönderme Testi
+	•	Fonksiyon: test_telemetri_gonder()
+	•	Endpoint: /api/telemetri_gonder
+	•	Açıklama: İHA’nın konum, hız, batarya gibi telemetri verilerini API’ye gönderir.
+
+4. QR Verisi Gönderme Testi
+	•	Fonksiyon: test_qr_gonder()
+	•	Endpoint: /api/qr_gonder
+	•	Açıklama: QR koddan alınan konum verilerini API’ye gönderir.
+
+5. Kamikaze Verisi Gönderme Testi
+	•	Fonksiyon: test_kamikaze_gonder()
+	•	Endpoint: /api/kamikaze_gonder
+	•	Açıklama: Kamikaze başlangıç/bitiş zamanlarını ve QR metnini API’ye gönderir.
+
+6. Kilitlenme Verisi Gönderme Testi
+	•	Fonksiyon: test_kilitlenme_gonder()
+	•	Endpoint: /api/kilitlenme_gonder
+	•	Açıklama: Kilitlenme başlangıç/bitiş zamanlarını API’ye gönderir.
+
+7. Kilitlenme Verilerini Getirme Testi
+	•	Fonksiyon: test_kilitlenme_verileri()
+	•	Endpoint: /api/kilitlenme_verileri
+	•	Açıklama: API’de kayıtlı olan kilitlenme verilerini getirir.
+
+8. Alan Bilgisi Alma Testi
+	•	Fonksiyon: test_alanbilgileri()
+	•	Endpoint: /api/alanbilgileri
+	•	Açıklama: Alan bilgilerini API’den çeker.
+
+⚠️ Olası Hatalar ve Çözümler
+	1.	Bağlantı Hatası:
+	•	API sunucusunun çalıştığından emin olun.
+	•	BASE_URL adresini kontrol edin.
+	2.	Kimlik Doğrulama Başarısız:
+	•	Kullanıcı adı ve şifreyi doğrulayın.
+	3.	Yanıt Alınamıyor:
+	•	API endpoint’lerinin doğru çalıştığını test edin.
+
+Bu test scripti, API’nin tüm temel fonksiyonlarını test etmek için tasarlanmıştır. Hata durumlarında yanıt kodlarını ve mesajlarını kontrol ederek gerekli düzeltmeleri yapabilirsiniz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
